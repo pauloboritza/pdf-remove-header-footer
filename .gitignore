@@ -1,4 +1,4 @@
 venv
-PDF_OUT/*
-PDF_IN/*
+PDF_OUT/**
+PDF_IN/**
 __pycache__
