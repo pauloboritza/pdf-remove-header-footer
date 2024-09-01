@@ -36,7 +36,7 @@ class PDFRemoveHeaderFooter:
         if min_clust < 2:
             min_clust = 2
         
-        hdbscan = HDBSCAN(min_clust)
+        hdbscan = HDBSCAN(min_cluster_size=min_clust)
         df['clusters'] = hdbscan.fit_predict(df)
         
         df_group = df.groupby('clusters').agg(avg_y0=('y0','mean'), avg_y1=('y1','mean'),
