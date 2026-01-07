@@ -4,6 +4,7 @@ cwd = os.getcwd()
 path_in = os.path.join(cwd, 'PDF_IN')
 path_out = os.path.join(cwd, 'PDF_OUT')
 pdfs = os.listdir(path_in)
+#pdfs = ["Aula 33 - Gestão e Governança - BPMN.pdf"]
 if(len(pdfs) >= 1):
         for pdf in pdfs:
             remove = PDFRemoveHeaderFooter(f'{path_in}\\{pdf}', f'{path_out}\\{pdf}')
